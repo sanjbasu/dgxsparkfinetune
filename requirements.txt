@@ -1,0 +1,45 @@
+# DGX Spark Fine-Tuning Requirements
+# ===================================
+# Optimized for NVIDIA DGX Spark with Grace Blackwell architecture
+
+# Core ML Framework
+torch>=2.2.0
+transformers>=4.40.0
+datasets>=2.18.0
+accelerate>=0.27.0
+
+# PEFT (Parameter-Efficient Fine-Tuning)
+peft>=0.10.0
+
+# Quantization for QLoRA
+bitsandbytes>=0.43.0
+
+# Tokenization
+sentencepiece>=0.2.0
+tiktoken>=0.6.0
+
+# Training utilities
+trl>=0.8.0              # Transformer Reinforcement Learning
+wandb>=0.16.0           # Experiment tracking (optional)
+tensorboard>=2.16.0     # Training visualization
+
+# Flash Attention 2 (optional but recommended)
+# Install separately: pip install flash-attn --no-build-isolation
+# flash-attn>=2.5.0
+
+# Evaluation
+evaluate>=0.4.0
+rouge-score>=0.1.2
+nltk>=3.8.0
+
+# Data processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Utilities
+tqdm>=4.66.0
+pyyaml>=6.0.0
+rich>=13.0.0            # Pretty console output
+
+# NVIDIA specific (pre-installed on DGX Spark)
+# nvidia-ml-py>=12.0.0  # GPU monitoring
